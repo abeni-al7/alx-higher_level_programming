@@ -2,4 +2,4 @@
 str = "Holberton School"
 rep = 3 * str
 sliced = str[:9]
-print(rep, "\n", sliced)
+print(rep + "\n" + sliced)
