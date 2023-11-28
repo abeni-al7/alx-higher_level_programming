@@ -5,5 +5,5 @@ for i in range(26):
     if chr(code) == 'e' or chr(code) == 'q':
         code += 1
         continue
-    print("{}".format(chr(code)), end = "")
+    print("{}".format(chr(code)), end="")
     code += 1
