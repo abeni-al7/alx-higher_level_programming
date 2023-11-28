@@ -2,5 +2,5 @@
 code = 97
 
 for i in range(26):
-    print("{}".format(chr(code)), end = "")
+    print("%s" % (chr(code)), end = "")
     code += 1
