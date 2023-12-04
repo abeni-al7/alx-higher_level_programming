@@ -22,6 +22,8 @@ int is_palindrome(listint_t **head)
 	if (n == 1 || n == 2 || n == 0)
 		return (1);
 	arr = malloc(n * sizeof(int));
+	if (arr == NULL)
+		return NULL;
 	while (i < n)
 	{
 		arr[i] = current->n;
