@@ -8,31 +8,30 @@
 
 int is_palindrome(listint_t **head)
 {
-	unsigned int n = 0, i = 0;
+	size_t n = 0, i;
 	listint_t *current = *head, *last = *head;
 	int *arr;
 
-	if ((*head) == NULL)
+	if (!(*head))
 		return (1);
-	while (last != NULL)
+	while (last)
 	{
 		n++;
 		last = last->next;
 	}
-	if (n == 1 || n == 2 || n == 0)
+	if (n <= 2)
 		return (1);
 	arr = malloc(n * sizeof(int));
-	if (arr == NULL)
+	if (!arr)
 		return (0);
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
 		arr[i] = current->n;
 		current = current->next;
-		i++;
 	}
-	for (i = 0, n -= 1; i < (n + 1) / 2; i++, n--)
+	for (i = 0; i < n / 2; i++)
 	{
-		if (arr[i] != arr[n])
+		if (arr[i] != arr[n - 1 - i])
 		{
 			free(arr);
 			return (0);
