@@ -8,21 +8,12 @@ def roman_to_int(roman_string):
                         "M": 1000}
     for i in range(len(roman_string)):
         if roman_string[i] in roman_dictionary:
-            if roman_string[i] == 'V' or roman_string[i] == 'X':
-                if i - 1 not in range(len(roman_string)):
-                    None
-                elif roman_string[i - 1] == 'I':
-                    number -= 2
-            if roman_string[i] == 'L' or roman_string[i] == 'C':
-                if i - 1 not in range(len(roman_string)):
-                    None
-                elif roman_string[i - 1] == 'X':
-                    number -= 20
-            if roman_string[i] == 'D' or roman_string[i] == 'M':
-                if i - 1 not in range(len(roman_string)):
-                    None
-                elif roman_string[i - 1] == 'C':
-                    number -= 200
+            if i > 0 and roman_string[i - 1] in roman_dictionary:
+                if roman_dictionary[roman_string[i - 1]] < roman_dictionary[roman_string[i]]:
+                    number += roman_dictionary[roman_string[i]] - 2 * roman_dictionary[roman_string[i - 1]]
+            else:
+                number += roman_dictionary[roman_string[i]]
+        else:
             number += roman_dictionary[roman_string[i]]
 
     return number
