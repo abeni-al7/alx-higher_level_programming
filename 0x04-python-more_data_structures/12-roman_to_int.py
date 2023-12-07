@@ -11,10 +11,8 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         if roman_string[i] in roman_dictionary:
             if i > 0 and roman_string[i - 1] in roman_dictionary:
-                if roman_dictionary[roman_string[i - 1]] < 
-			roman_dictionary[roman_string[i]]:
-                    number += roman_dictionary[roman_string[i]] - 2 * 
-				roman_dictionary[roman_string[i - 1]]
+                if roman_dictionary[roman_string[i - 1]] < roman_dictionary[roman_string[i]]:
+                    number += roman_dictionary[roman_string[i]] - 2 * roman_dictionary[roman_string[i - 1]]
                 else:
                     number += roman_dictionary[roman_string[i]]
             else:
