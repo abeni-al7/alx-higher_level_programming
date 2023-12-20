@@ -13,8 +13,8 @@ class Square:
         position (tuple): space position
  
     Methods:
-        area: area of the square
-        my_print: prints the square object
+        area(): area of the square
+        my_print(): prints the square object
     """
 
     def __init__(self, size=0, position=(0,0)):
