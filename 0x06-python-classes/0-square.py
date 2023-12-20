@@ -2,7 +2,6 @@
 """
 Defines an empty class.
 """
-
 class Square:
     """
     An empty class template.
