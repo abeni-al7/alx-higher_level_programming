@@ -6,9 +6,9 @@ Defines a class with attributes.
 
 class Square:
     """
-     A simple square class with attributes.
+    A simple square class with attributes.
      
-     Attributes:
+    Attributes:
         size (int): the length of the side of the square
  
     Methods:
