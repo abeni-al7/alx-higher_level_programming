@@ -2,6 +2,8 @@
 """
 Defines a class with attributes.
 """
+
+
 class Square:
     """
     A simple square class with attributes.
@@ -14,6 +16,7 @@ class Square:
         area(): area of the square
         my_print(): prints the square object
     """
+
     def __init__(self, size=0, position=(0, 0)):
         if type(size) is not int:
             raise TypeError("size must be an integer")
