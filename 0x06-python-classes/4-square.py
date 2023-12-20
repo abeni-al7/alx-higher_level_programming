@@ -7,10 +7,10 @@ Defines a class with attributes.
 class Square:
     """
     A simple square class with attributes.
-     
+
     Attributes:
         size (int): the length of the side of the square
- 
+
     Methods:
         area: area of the square
     """
