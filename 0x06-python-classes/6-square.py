@@ -51,17 +51,18 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-        lines = self.__position[1]
-        for i in range(self.__size + lines):
-            spaces = self.__position[0]
-            if lines != 0:
-                print()
-                lines -= 1
-                continue
-            for j in range(self.__size + spaces):
-                if spaces != 0:
-                    print(" ", end="")
-                    spaces -= 1
+        else:
+            lines = self.__position[1]
+            for i in range(self.__size + lines):
+                spaces = self.__position[0]
+                if lines != 0:
+                    print()
+                    lines -= 1
                     continue
-                print("#", end="")
-            print()
+                for j in range(self.__size + spaces):
+                    if spaces != 0:
+                        print(" ", end="")
+                        spaces -= 1
+                        continue
+                    print("#", end="")
+                print()
