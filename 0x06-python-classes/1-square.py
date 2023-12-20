@@ -3,6 +3,7 @@
 Defines a class with an attribute.
 """
 
+
 class Square:
     """
     A simple square class with attributes.
