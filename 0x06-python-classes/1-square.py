@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Defines a class with an attribute.
+"""
+
 class Square:
     """
     A simple square class with attributes.
