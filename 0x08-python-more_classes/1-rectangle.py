@@ -10,6 +10,7 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
+        """Initializer for object"""
         self.__width = width
         self.__height = height
         if isinstance(self.__width) != int:
