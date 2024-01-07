@@ -1,0 +1,18 @@
+This test file tests a function that prints a name.
+
+# Import the function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Check if the function prints string name
+>>> say_my_name('Abenezer', 'Endalew')
+My name is Abenezer Endalew
+
+# Check if the function raises a TypeError for invalid parameters
+>>> say_my_name(12, 'Abebe')
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name('Abebe', 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
