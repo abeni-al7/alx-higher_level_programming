@@ -1,0 +1,42 @@
+This file tests the module that performs matrix division
+
+# import the module
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# check if the function divides all elements to 2 decimal places.
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+# Check the function if it raises a TypeError for invalid arguments
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix = [[1, 2, t], ['car', 5, 9]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Check if the function raises a TypeError if all the rows are not of the same size.
+>>> matrix = [[1, 2, 3], [4, 5]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+# Check if the function raises a TypeError for a non-numerical second argument.
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 'car')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+# Check if the function raises a ZeroDivisionError for a second argument equal to 0
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
