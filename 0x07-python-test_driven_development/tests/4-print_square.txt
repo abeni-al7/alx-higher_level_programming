@@ -1,0 +1,44 @@
+This file tests a function that prints a square.
+
+# Import the function
+>>> print_square = __import__('4-print_square').print_square
+
+# Check if the function prints a square with the provided size
+>>> print_square(4)
+####
+####
+####
+####
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+>>> print_square(0)
+
+>>> print_square(1)
+#
+
+# Check if the function raises a TypeError if size is not an integer
+>>> print_square('car')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# Check if the function raises a ValueError size is less than 0
+>>> print_square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+# Check if the function raises a TypeError if the parameter is a negative float
+>>> print_square(-2.4)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

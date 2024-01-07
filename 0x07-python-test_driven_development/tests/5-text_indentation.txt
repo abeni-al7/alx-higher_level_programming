@@ -1,0 +1,21 @@
+This test file tests a text indentation function
+
+# Import the function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Check if the function correctly indents text
+>>> text = "A statement. A question? A colon: Some text"
+>>> text_indentation(text)
+A statement.
+<BLANKLINE>
+A question?
+<BLANKLINE>
+A colon:
+<BLANKLINE>
+Some text
+
+# Check if the function raises a TypeError for a non-string parameter
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
