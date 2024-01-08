@@ -1,0 +1,31 @@
+This file tests the MyList class.
+
+# Get the MyList class
+>>> MyList = __import__('1-my_list').MyList
+
+# Create an instance of MyList
+>>> my_list_instance = MyList([4, 2, 6, 1, 9])
+
+# Check if the instance is a subclass of the list class
+>>> isinstance(my_list_instance, list)
+True
+
+# Check if the instance is an instance of the MyList class
+>>> isinstance(my_list_instance, MyList)
+True
+
+# Check if the instance is an instance of the list class (inherited)
+>>> isinstance(my_list_instance, list)
+True
+
+# Check if the instance is an instance of the int class (should be False)
+>>> isinstance(my_list_instance, int)
+False
+
+# Check if the instance is an instance of the str class (should be False)
+>>> isinstance(my_list_instance, str)
+False
+
+# Check if the print_sorted method sorts the list
+>>> my_list_instance.print_sorted()
+[1, 2, 4, 6, 9]
