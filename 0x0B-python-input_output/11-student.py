@@ -28,9 +28,9 @@ class Student:
             my_dict["last_name"] = self.last_name
             my_dict["age"] = self.age
         return my_dict
-    
+
     def reload_from_json(self, json):
         """Replaces all attributes of Student"""
-        self.first_name = json["first_name"]
-        self.last_name = json["last_name"]
-        self.age = json["age"]
+        for key, value in json.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
