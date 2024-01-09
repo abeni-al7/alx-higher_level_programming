@@ -2,6 +2,7 @@
 """A module containing a student class
 """
 
+
 class Student:
     """A student class
     """
