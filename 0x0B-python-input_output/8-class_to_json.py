@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""A module for adding cl args to a list and saves it"""
-import json
+"""A module for returning all attributes of an object"""
 
 
 def class_to_json(obj):
+    """A function that returns all attributes of an object"""
     my_dict = obj.__dict__
     return my_dict
