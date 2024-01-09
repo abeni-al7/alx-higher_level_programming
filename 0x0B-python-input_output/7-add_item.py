@@ -8,7 +8,7 @@ load = __import__('6-load_from_json_file').load_from_json_file
 
 try:
     my_list = load("add_item.json")
-except json.JSONDecodeError:
+except Exception:
     my_list = []
 for i in range(1, len(sys.argv)):
     my_list.append(sys.argv[i])
