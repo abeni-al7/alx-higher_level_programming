@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" A module containing a student class
+"""A module containing a student class
 """
 
 class Student:
-    """ A student class
+    """A student class
     """
-
 
     def __init__(self, first_name, last_name, age):
         """A method that initializes a Student"""
