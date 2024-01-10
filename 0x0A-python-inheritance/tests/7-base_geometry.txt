@@ -21,7 +21,7 @@ Case 2: Non-integer argument
 >>> bg.integer_validator("name", "5")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 ------------------------------------
 
@@ -31,7 +31,7 @@ Case 3: Boolean argument
 >>> bg.integer_validator("name", True)
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 ---------------------------------------
 
@@ -118,7 +118,7 @@ Case 12: Passing tuple argument
 >>> bg.integer_validator("name", (4,))
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 -------------------------------------------
 
@@ -128,7 +128,7 @@ Case 13: Passing list argument
 >>> bg.integer_validator("name", [3])
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 -----------------------------------------
 
@@ -138,7 +138,7 @@ Case 14: Passing dictionary argument
 >>> bg.integer_validator("name", {3, 4})
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 --------------------------------------------
 
@@ -148,6 +148,6 @@ Case 15: Passing None as an argument
 >>> bg.integer_validator("name", None)
 Traceback (most recent call last):
 ...
-TypeError: name must be an integr
+TypeError: name must be an integer
 
 -------------------------------------------
