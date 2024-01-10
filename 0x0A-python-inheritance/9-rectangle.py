@@ -6,6 +6,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
     """A Rectangle class"""
 
+
     def __init__(self, width: int, height: int):
         """Initialize the rectangle class."""
         self.integer_validator("width", width)
@@ -18,4 +19,5 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self) -> str:
-        return "[{}] {}/{}".format(type(self).__name__,self.__width, self.__height)
+        return "[{}] {}/{}".format(type(self).__name__,self.__width,
+                                   self.__height)
