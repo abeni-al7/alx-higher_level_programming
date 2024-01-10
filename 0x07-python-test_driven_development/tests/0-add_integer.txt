@@ -30,3 +30,17 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
+# Check for float overflow
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float NaN to integer
+
+# Check if the default argument works
+>>> add_integer(2)
+98
