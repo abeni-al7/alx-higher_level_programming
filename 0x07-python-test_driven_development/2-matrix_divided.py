@@ -8,16 +8,13 @@ def matrix_divided(matrix, div):
     """A function that divides all elements of a matrix"""
 
     if not isinstance(matrix, list):
-        raise TypeError('matrix must be a matrix (list of lists) of
-                        integers/floats')
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for i in range(len(matrix)):
         if not isinstance(matrix[i], list):
-            raise TypeError('matrix must be a matrix (list of lists)
-                            of integers/floats')
+            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
         for j in matrix[i]:
             if not isinstance(j, (int, float)):
-                raise TypeError('matrix must be a matrix (list of
-                                lists) of integers/floats')
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
         if i == 0:
             continue
         if len(matrix[i]) != len(matrix[i - 1]):
