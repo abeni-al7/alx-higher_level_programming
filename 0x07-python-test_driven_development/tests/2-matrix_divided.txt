@@ -45,3 +45,14 @@ ZeroDivisionError: division by zero
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
 >>> matrix_divided(matrix, float('inf')
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+# Check for missing arguments
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
