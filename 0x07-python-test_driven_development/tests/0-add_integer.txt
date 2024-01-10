@@ -44,3 +44,9 @@ OverflowError: cannot convert float NaN to integer
 # Check if the default argument works
 >>> add_integer(2)
 98
+
+# Check the function with no arguments
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
