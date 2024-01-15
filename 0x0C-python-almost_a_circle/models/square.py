@@ -18,10 +18,6 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         """Setter for side length"""
-        if not isinstance(size, int):
-            raise TypeError('width must be an integer')
-        if size <= 0:
-            raise ValueError('height must be > 0')
         self.width = size
         self.height = size
 
@@ -58,4 +54,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Prints the Square"""
-        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y, self.width)
+        return '[Square] ({}) {}/{} -
+                 {}'.format(self.id, self.x, self.y, self.width)

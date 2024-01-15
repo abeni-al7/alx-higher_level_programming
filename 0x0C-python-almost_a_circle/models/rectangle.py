@@ -34,7 +34,7 @@ class Rectangle(Base):
     def width(self):
         """Getter for width"""
         return self.__width
-    
+
     @width.setter
     def width(self, width):
         """Setter for width"""
@@ -48,7 +48,7 @@ class Rectangle(Base):
     def height(self):
         """Getter for height"""
         return self.__height
-    
+
     @height.setter
     def height(self, height):
         """Setter for height"""
@@ -62,7 +62,7 @@ class Rectangle(Base):
     def x(self):
         """Getter for x"""
         return self.__x
-    
+
     @x.setter
     def x(self, x):
         """Setter for x"""
@@ -76,7 +76,7 @@ class Rectangle(Base):
     def y(self):
         """Getter for y"""
         return self.__y
-    
+
     @y.setter
     def y(self, y):
         """Setter for y"""
@@ -89,7 +89,7 @@ class Rectangle(Base):
     def area(self):
         """Returns the area of the Rectangle"""
         return self.__width * self.__height
-    
+
     def display(self):
         """Displays the Rectangle object"""
         for line in range(self.__y):
@@ -113,7 +113,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """Prints the Rectangle"""
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return '[Rectangle] ({}) {}/{} -
+                 {}/{}'.format(self.id, self.__x, self.__y, 
+                                self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """Updates the Rectangle"""
