@@ -28,7 +28,7 @@ class Base:
                 raise TypeError('list_dictionaries must be a list of dictionaries')
         json_string = json.dumps(list_dictionaries)
         return json_string
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Save an object in a file"""
@@ -51,14 +51,14 @@ class Base:
             return []
         my_list = json.loads(json_string)
         return my_list
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
         dummy = cls(2, 2)
         cls.update(dummy, **dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """Returns a list of objects from a file"""
