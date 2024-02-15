@@ -1,6 +1,5 @@
 -- Lists all genres of the show 'Dexter' in 
 -- 'hbtn_0d_tvshows'
-USE hbtn_0d_tvshows;
 SELECT tg.name
 FROM tv_genres AS tg
 INNER JOIN tv_show_genres AS tsg
