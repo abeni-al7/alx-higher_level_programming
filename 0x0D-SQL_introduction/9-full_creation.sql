@@ -1,5 +1,4 @@
 -- fully creates a table
-USE hbtn_oc_o;
 CREATE TABLE IF NOT EXISTS second_table(
     id INT,
     name VARCHAR(256),
