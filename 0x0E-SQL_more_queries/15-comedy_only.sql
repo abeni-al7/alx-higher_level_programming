@@ -1,5 +1,4 @@
 -- Lists all comedy shows in 'hbtn_0d_tvshows'
-USE hbtn_0d_tvshows;
 SELECT ts.title
 FROM tv_shows AS ts
 INNER JOIN tv_show_genres AS tsg
