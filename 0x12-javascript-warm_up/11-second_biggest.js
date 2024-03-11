@@ -3,21 +3,22 @@ const args = process.argv;
 if (args.length <= 4) {
   console.log(0);
 } else {
-  let max = 0;
-  for (let i = 2; i < args.length; i++) {
+  let max = Number(args[2]);
+  for (let i = 3; i < args.length; i++) {
+    const num = Number(args[i]);
     args[i] = Number(args[i]);
-    if (args[i] > max) {
-      max = i;
+    if (num > max) {
+      max = num;
     }
   }
-  let secondMax = 0;
-  for (let i = 2; i < args.length; i++) {
-    if (i === max) {
+  let secondMax = Number(args[2]);
+  for (let i = 3; i < args.length; i++) {
+    const num = Number(args[i]);
+    if (num === max) {
       continue;
     }
-    args[i] = Number(args[i]);
-    if (args[i] > secondMax) {
-      secondMax = args[i];
+    if (num > secondMax) {
+      secondMax = num;
     }
   }
   console.log(secondMax);
