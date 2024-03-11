@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const args = process.argv;
-if (args.length <= 4) {
+if (args.length <= 3) {
   console.log(0);
 } else {
   let max = Number(args[2]);
