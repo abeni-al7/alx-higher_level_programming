@@ -18,8 +18,8 @@ if __name__ == "__main__":
     )
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE name LIKE '%s'\
-                   ORDER BY id" % (searched))
+                   WHERE name LIKE '{}'\
+                   ORDER BY id".format(searched))
     result = cursor.fetchall()
 
     for row in result:
