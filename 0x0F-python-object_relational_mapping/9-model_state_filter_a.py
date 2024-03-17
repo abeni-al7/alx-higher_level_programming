@@ -11,9 +11,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    row = session.query(State.id, State.name).order_by(State.id).first()
+    result = session.query(State.id, State.name).\
+        filter(State.name.like("%a%")).order_by(State.id).all()
 
-    if row:
+    for row in result:
         print("{}: {}".format(row.id, row.name))
-    else:
-        print("Nothing")
