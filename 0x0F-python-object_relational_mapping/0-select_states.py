@@ -4,9 +4,14 @@ import sys
 """A script that lists all states from a database"""
 
 args = sys.argv
-username = args[1]
-password = args[2]
-db_name = args[3]
+if len(args) > 3:
+    username = args[1]
+    password = args[2]
+    db_name = args[3]
+else:
+    username = ""
+    password = ""
+    db_name = ""
 
 connection = MySQLdb.connect(
     host="localhost",
