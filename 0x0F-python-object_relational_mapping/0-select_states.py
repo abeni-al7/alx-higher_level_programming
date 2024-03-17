@@ -10,8 +10,8 @@ if __name__ == "__main__":
         password = args[2]
         db_name = args[3]
     else:
-        username = "root"
-        password = "root"
+        username = "abeni-al7"
+        password = "Duolingo@mycrib"
         db_name = "hbtn_0e_0_usa"
 
     connection = MySQLdb.connect(
