@@ -23,11 +23,7 @@ if __name__ == "__main__":
                    WHERE s.name = %s\
                    ORDER BY c.id", (state_name,))
     result = cursor.fetchall()
-
-    for i, row in enumerate(result):
-        if i < len(result) - 1:
-            print(row[0], end=", ")
-        else:
-            print(row[0])
+    city_names = [row[0] for row in result]
+    print(", ".join(city_names))
     cursor.close()
     connection.close()
