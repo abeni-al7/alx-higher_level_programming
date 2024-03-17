@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Searches data from a database"""
 import sys
 import MySQLdb
 
