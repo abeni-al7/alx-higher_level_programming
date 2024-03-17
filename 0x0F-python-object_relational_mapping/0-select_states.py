@@ -5,14 +5,9 @@ import sys
 
 if __name__ == "__main__":
     args = sys.argv
-    if len(args) > 3:
-        username = args[1]
-        password = args[2]
-        db_name = args[3]
-    else:
-        username = "abeni_al7"
-        password = "Duolingo@mycrib"
-        db_name = "hbtn_0e_0_usa"
+    username = args[1]
+    password = args[2]
+    db_name = args[3]
 
     connection = MySQLdb.connect(
         host="localhost",
