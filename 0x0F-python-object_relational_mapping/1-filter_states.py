@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+"""A script that lists all states with names starting with N from a database"""
+import MySQLdb
+import sys
+
+if __name__ == "__main__":
+    args = sys.argv
+    username = args[1]
+    password = args[2]
+    db_name = args[3]
+
+    connection = MySQLdb.connect(
+        host="localhost",
+        user=username,
+        passwd=password,
+        db=db_name,
+        port=3306
+    )
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM states\
+                   WHERE states.name LIKE 'N%'\
+                   ORDER BY states.id")
+    result = cursor.fetchall()
+
+    for row in result:
+        print(row)
