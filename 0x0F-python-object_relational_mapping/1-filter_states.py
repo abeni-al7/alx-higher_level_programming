@@ -4,10 +4,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
-        print("Usage: python script.py <username> <password> <database>")
-        sys.exit(1)
-
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -21,9 +17,12 @@ if __name__ == "__main__":
     )
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE states.name LIKE 'N%'\
-                   ORDER BY states.id")
+                   WHERE name LIKE 'N%'\
+                   ORDER BY id")
     result = cursor.fetchall()
 
     for row in result:
         print(row)
+    cursor.close()
+    connection.close()
+    

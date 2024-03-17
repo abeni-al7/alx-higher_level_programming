@@ -17,8 +17,10 @@ if __name__ == "__main__":
         port=3306
     )
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
+    cursor.execute("SELECT * FROM states ORDER BY id")
     result = cursor.fetchall()
 
     for row in result:
         print(row)
+    cursor.close()
+    connection.close()
