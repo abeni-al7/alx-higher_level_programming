@@ -18,7 +18,7 @@ if __name__ == "__main__":
     )
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM states\
-                   WHERE name BINARY LIKE '{}'\
+                   WHERE name = '{}'\
                    ORDER BY id".format(searched))
     result = cursor.fetchall()
 
